@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphic Calc | Portfolio Project</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="calculator-container glass-morphism p-6 rounded-[2.5rem] shadow-2xl w-full max-w-md">
+        <!-- Display Screen -->
+        <div class="screen-container mb-6 p-6 rounded-3xl bg-black/20 text-right">
+            <div id="previous-operand" class="text-indigo-400 text-sm h-6 overflow-hidden opacity-80"></div>
+            <div id="current-operand" class="text-white text-4xl font-light truncate">0</div>
+        </div>
+
+        <!-- Buttons Grid -->
+        <div class="grid grid-cols-4 gap-3">
+            <!-- Row 1 -->
+            <button onclick="clearScreen()" class="btn-func col-span-2">AC</button>
+            <button onclick="deleteNumber()" class="btn-func">DEL</button>
+            <button onclick="appendOperator('/')" class="btn-op">÷</button>
+
+            <!-- Row 2 -->
+            <button onclick="appendNumber('7')" class="btn-num">7</button>
+            <button onclick="appendNumber('8')" class="btn-num">8</button>
+            <button onclick="appendNumber('9')" class="btn-num">9</button>
+            <button onclick="appendOperator('*')" class="btn-op">×</button>
+
+            <!-- Row 3 -->
+            <button onclick="appendNumber('4')" class="btn-num">4</button>
+            <button onclick="appendNumber('5')" class="btn-num">5</button>
+            <button onclick="appendNumber('6')" class="btn-num">6</button>
+            <button onclick="appendOperator('-')" class="btn-op">−</button>
+
+            <!-- Row 4 -->
+            <button onclick="appendNumber('1')" class="btn-num">1</button>
+            <button onclick="appendNumber('2')" class="btn-num">2</button>
+            <button onclick="appendNumber('3')" class="btn-num">3</button>
+            <button onclick="appendOperator('+')" class="btn-op">+</button>
+
+            <!-- Row 5 -->
+            <button onclick="appendNumber('0')" class="btn-num col-span-2">0</button>
+            <button onclick="appendNumber('.')" class="btn-num">.</button>
+            <button onclick="calculate()" class="btn-equals">=</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
